@@ -21,9 +21,9 @@ osama = (n, next) ->
     throw err if err
     try
       body = JSON.parse body
-      return result.unescapedUrl for result in body.responseData.results.slice(0, n)
+      next null, result.unescapedUrl for result in body.responseData.results.slice(0, n)
     catch err
-      console.log err
+      next err
 
 module.exports = (robot) ->
 
