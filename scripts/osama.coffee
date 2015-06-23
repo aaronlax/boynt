@@ -29,11 +29,9 @@ module.exports = (robot) ->
 
   robot.respond /osama me/i, (msg) ->
     osama 1, (err, body) ->
-      console.log body
       msg.send url for url in (body || [])
 
   robot.respond /osama bomb( (\d+))?/i, (msg) ->
     count = msg.match[2] || 5
     osama count, (err, body) ->
-      console.log body
       msg.send url for url in (body || [])
