@@ -21,7 +21,7 @@ osama = (n, next) ->
     throw err if err
     try
       body = JSON.parse body
-      next null, result.unescapedUrl for result in body.responseData.results.slice(0, n)
+      next null, (result.unescapedUrl for result in body.responseData.results.slice(0, n))
     catch err
       next err
 
@@ -29,9 +29,11 @@ module.exports = (robot) ->
 
   robot.respond /osama me/i, (msg) ->
     osama 1, (err, body) ->
+      console.log body
       msg.send url for url in (body || [])
 
   robot.respond /osama bomb( (\d+))?/i, (msg) ->
     count = msg.match[2] || 5
     osama count, (err, body) ->
+      console.log body
       msg.send url for url in (body || [])
