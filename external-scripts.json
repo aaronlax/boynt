@@ -9,5 +9,9 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-cron"
+  "hubot-cron",
+  "hubot-seen",
+  "hubot-business-cat",
+  "hubot-victory",
+  "hubot-ambush"
 ]
