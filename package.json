@@ -8,6 +8,7 @@
     "hubot": "^2.13.2",
     "hubot-ambush": "0.0.3",
     "hubot-business-cat": "^1.2.2",
+    "hubot-codinglove": "^0.2.6",
     "hubot-cron": "^0.2.9",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.5",
