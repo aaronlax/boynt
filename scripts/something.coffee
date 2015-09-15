@@ -10,3 +10,6 @@ module.exports = (robot) ->
 
   robot.hear /(PNTK2[0-9A-Z]{12})/, (msg) ->
     msg.send '*O hai I\'m ' + msg.match[1] + '*\n```Terminate me: https://poynt.net/a/terminals/' + msg.match[1] + '/manage```\n```Graylog me: https://poynt.net/a/terminals/' + msg.match[1] + '/graylog```'
+
+  robot.hear /(\.\.[0-9]{3})/, (msg) ->
+    msg.send '*O hai I\'m ' + msg.match[1] + '*\n```Terminate me: https://poynt.net/a/terminals/' + msg.match[1] + '/manage```\n```Graylog me: https://poynt.net/a/terminals/' + msg.match[1] + '/graylog```'
